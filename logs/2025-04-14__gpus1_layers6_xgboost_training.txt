@@ -1,0 +1,63 @@
+2025-04-14
+Namespace(binary_task=True, embed_path='data/training_data/embeddings', log_name='', num_hidden_layers=6, num_iter=500, port=12557, pretrained_model='saved_model/p450_ESP_1gpus_bs72_1e-05_layers6.pkl', save_pred_path='GB_saved_predictions', save_xgb_path='saved_model/p450_ESP_xgb', test_dir='data/training_data/train_val_p450/test.csv', train_dir='data/training_data/train_val_p450/train.csv', val_dir='data/training_data/train_val_p450/val.csv', world_size=1)
+Added key: store_based_barrier_key:1 to store for rank: 0
+Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+Loading dataset to cuda:0
+Loading dataloader
+Loading model
+Loading model
+Successfully loaded pretrained model
+Extracting repr
+[2]
+Extracting repr
+[0]
+Extracting repr
+[1640]
+13688
+Extraction complete
+ESM1b+ChemBERTa2
+Validation set:
+xgb模型保存路径：saved_model/p450_ESP_xgb/y_val_pred_all
+load_y_val_pred: >>>[9.8348802e-01 2.0840742e-01 9.4548672e-01 ... 1.1041489e-03 2.6659732e-04
+ 1.9487038e-02]
+y_val_pred: >>>[9.8348802e-01 2.0840742e-01 9.4548672e-01 ... 1.1041489e-03 2.6659732e-04
+ 1.9487038e-02]
+accuracy: 0.9354000692760651,ROC AUC: 0.9676636201029319, MCC: 0.8374540743056981
+Test set:
+xgb模型保存路径：saved_model/p450_ESP_xgb/ESM1b_ChemBERTa
+load_y_val_pred: >>>[0.26486155 0.71025926 0.947745   ... 0.03776718 0.07513305 0.0326296 ]
+y_val_pred: >>>[0.26486155 0.71025926 0.947745   ... 0.03776718 0.07513305 0.0326296 ]
+accuracy: 0.9159848042080655,ROC AUC: 0.9566624395074868, MCC: 0.7813467095308899
+ESM1b+ChemBERTa2+cls-token
+Validation set:
+xgb模型保存路径：saved_model/p450_ESP_xgb/y_val_pred_all_cls
+load_y_val_pred: >>>[9.9997318e-01 9.9933499e-01 9.9865520e-01 ... 1.3231990e-04 1.1752025e-04
+ 1.5867950e-05]
+y_val_pred: >>>[9.9997318e-01 9.9933499e-01 9.9865520e-01 ... 1.3231990e-04 1.1752025e-04
+ 1.5867950e-05]
+accuracy: 0.9276065119501212,ROC AUC: 0.9555207328833173, MCC: 0.8208797636616407
+Test set:
+xgb模型保存路径：saved_model/p450_ESP_xgb/ESM1b_ChemBERTa_cls
+load_y_val_pred: >>>[9.8773974e-01 9.0594345e-01 9.9977094e-01 ... 2.9818351e-05 9.1880429e-01
+ 5.8007132e-05]
+y_val_pred: >>>[9.8773974e-01 9.0594345e-01 9.9977094e-01 ... 2.9818351e-05 9.1880429e-01
+ 5.8007132e-05]
+accuracy: 0.9118936294564582,ROC AUC: 0.9484743902691255, MCC: 0.7741815267875086
+cls-token
+Validation set:
+xgb模型保存路径：saved_model/p450_ESP_xgb/y_val_pred_cls
+load_y_val_pred: >>>[9.9999487e-01 9.9757618e-01 9.9887305e-01 ... 4.9038619e-05 2.4642237e-05
+ 1.8011580e-05]
+y_val_pred: >>>[9.9999487e-01 9.9757618e-01 9.9887305e-01 ... 4.9038619e-05 2.4642237e-05
+ 1.8011580e-05]
+accuracy: 0.929857984066505,ROC AUC: 0.9494918785976674, MCC: 0.8260520483506948
+Test set:
+xgb模型保存路径：saved_model/p450_ESP_xgb/cls
+load_y_val_pred: >>>[9.9829453e-01 8.2478237e-01 9.9997520e-01 ... 3.7182912e-05 9.4516373e-01
+ 2.1954895e-06]
+y_val_pred: >>>[9.9829453e-01 8.2478237e-01 9.9997520e-01 ... 3.7182912e-05 9.4516373e-01
+ 2.1954895e-06]
+accuracy: 0.9128433664523671,ROC AUC: 0.9456739615240646, MCC: 0.7762837328084818
+Three models combined:
+ESM1b+ChemBERTa2+cls: 0.2, ESM1b+ChemBERTa2: 0.72, cls-token: 0.08000000000000007
+accuracy: 0.923801870251315,ROC AUC: 0.9604263279964604, MCC: 0.8021879581442242

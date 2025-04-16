@@ -1,0 +1,9 @@
+p450训练日志.ipynb
+saved_model/p450_ESP_1gpus_bs72_1e-05_layers6.pkl
+saved_model/p450_ESP_1gpus_bs72_1e-05_layers6.pkl.7z
+pretrained_model
+*.ipynb_checkpoints
+dbData
+prediction_code/data/temp_embeddings
+data/training_data/train_val_origin
+data/training_data/embeddings
